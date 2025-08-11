@@ -1,0 +1,51 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jardim e Alegria - Painel Admin</title>
+  <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <h1>Jardim e Alegria - Painel Admin</h1>
+      <div class="nav-buttons">
+        <a href="index.html" class="view-site">Feed</a>
+        <a href="profile.html" class="profile-button">Meu Perfil</a>
+        <a href="#" class="logout-button">Sair</a>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section>
+      <h2>Criar Novo Post</h2>
+      <form id="post-form" class="post-form">
+        <input type="text" id="plantName" placeholder="Nome da Planta" required>
+        <textarea id="description" placeholder="Descrição" required></textarea>
+        <input type="file" id="imageFiles" multiple accept="image/*">
+        <div id="imagesPreview" class="images-preview"></div>
+        <button type="submit">Criar Post</button>
+      </form>
+    </section>
+    <section>
+      <h2>Seus Posts de Plantas</h2>
+      <div id="admin-posts-container" class="admin-posts"></div>
+    </section>
+    <section id="edit-post-section" class="hidden">
+      <h2>Editar Post</h2>
+      <form id="edit-post-form" class="edit-form">
+        <input type="hidden" id="edit-post-id">
+        <input type="text" id="edit-plantName" placeholder="Título" required>
+        <textarea id="edit-description" placeholder="Descrição" required></textarea>
+        <input type="file" id="edit-imageFiles" multiple accept="image/*">
+        <div id="edit-imagesPreview" class="images-preview"></div>
+        <div class="edit-form-buttons">
+          <button type="submit" class="save-btn">Salvar Alterações</button>
+          <button type="button" class="cancel-btn" onclick="cancelEdit()">Cancelar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script src="admin.js"></script>
+</body>
+</html>

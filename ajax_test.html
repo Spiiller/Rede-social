@@ -1,0 +1,32 @@
+<!-- ajax_test.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX Test</title>
+</head>
+<body>
+    <h1>AJAX Communication Test</h1>
+    <button id="testBtn">Test AJAX</button>
+    <div id="result"></div>
+    
+    <script>
+    document.getElementById('testBtn').addEventListener('click', async () => {
+        try {
+            const response = await fetch('ajax_test.php');
+            const text = await response.text();
+            document.getElementById('result').innerHTML = `
+                <h3>Raw Response:</h3>
+                <pre>${text}</pre>
+                <h3>Parsed Response:</h3>
+                <pre>${JSON.stringify(JSON.parse(text), null, 2)}</pre>
+            `;
+        } catch (error) {
+            document.getElementById('result').innerHTML = `
+                <h3>Error:</h3>
+                <pre>${error}</pre>
+            `;
+        }
+    });
+    </script>
+</body>
+</html>
