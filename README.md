@@ -6,7 +6,7 @@ Jardim e alegria é uma rede social para compartilhar posts sobre plantas, com u
 - **Banco**: MySQL (tabelas: users, posts, post_images, post_likes, post_saves, comments).
 
 ## Instalação
-1. Clone: `git clone https://github.com/seu-usuario/plantgram.git`
+1. Clone: `git clone https://github.com/Spiiller/Rede-social`
 2. Configure DB em `config.php` (use `.env` para segurança).
 3. Importe `docs/database.sql` e `docs/schema.sql` no MySQL.
 4. Torne `uploads/` writable: `chmod 777 uploads/`.
